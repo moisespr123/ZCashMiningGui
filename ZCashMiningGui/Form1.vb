@@ -122,7 +122,6 @@
         procMiner.Start()
         procMiner.BeginOutputReadLine()
         Do Until (procMiner.HasExited)
-            '    'MinerConsole.Text += swReader.Read
         Loop
         procMiner.Dispose()
 
