@@ -27,6 +27,8 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AddressField = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TuningButton = New System.Windows.Forms.Button()
+        Me.CompatibilityModeCheckBox = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GPUDevicesField = New System.Windows.Forms.TextBox()
         Me.UseNone = New System.Windows.Forms.RadioButton()
@@ -45,9 +47,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ServerField = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.CompatibilityModeCheckBox = New System.Windows.Forms.CheckBox()
         Me.ShowCMD = New System.Windows.Forms.CheckBox()
-        Me.TuningButton = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -83,6 +83,25 @@ Partial Class Form1
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Use Nvidia or AMD?"
+        '
+        'TuningButton
+        '
+        Me.TuningButton.Location = New System.Drawing.Point(119, 86)
+        Me.TuningButton.Name = "TuningButton"
+        Me.TuningButton.Size = New System.Drawing.Size(75, 23)
+        Me.TuningButton.TabIndex = 16
+        Me.TuningButton.Text = "Tuning"
+        Me.TuningButton.UseVisualStyleBackColor = True
+        '
+        'CompatibilityModeCheckBox
+        '
+        Me.CompatibilityModeCheckBox.AutoSize = True
+        Me.CompatibilityModeCheckBox.Location = New System.Drawing.Point(6, 93)
+        Me.CompatibilityModeCheckBox.Name = "CompatibilityModeCheckBox"
+        Me.CompatibilityModeCheckBox.Size = New System.Drawing.Size(114, 17)
+        Me.CompatibilityModeCheckBox.TabIndex = 15
+        Me.CompatibilityModeCheckBox.Text = "Compatibility Mode"
+        Me.CompatibilityModeCheckBox.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -236,9 +255,9 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(802, 417)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(28, 13)
+        Me.Label6.Size = New System.Drawing.Size(34, 13)
         Me.Label6.TabIndex = 11
-        Me.Label6.Text = "v0.2"
+        Me.Label6.Text = "v0.2b"
         '
         'ServerField
         '
@@ -256,16 +275,6 @@ Partial Class Form1
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Server:Port"
         '
-        'CompatibilityModeCheckBox
-        '
-        Me.CompatibilityModeCheckBox.AutoSize = True
-        Me.CompatibilityModeCheckBox.Location = New System.Drawing.Point(6, 93)
-        Me.CompatibilityModeCheckBox.Name = "CompatibilityModeCheckBox"
-        Me.CompatibilityModeCheckBox.Size = New System.Drawing.Size(114, 17)
-        Me.CompatibilityModeCheckBox.TabIndex = 15
-        Me.CompatibilityModeCheckBox.Text = "Compatibility Mode"
-        Me.CompatibilityModeCheckBox.UseVisualStyleBackColor = True
-        '
         'ShowCMD
         '
         Me.ShowCMD.AutoSize = True
@@ -275,15 +284,6 @@ Partial Class Form1
         Me.ShowCMD.TabIndex = 15
         Me.ShowCMD.Text = "Show CMD window" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Output will not be shown here)"
         Me.ShowCMD.UseVisualStyleBackColor = True
-        '
-        'TuningButton
-        '
-        Me.TuningButton.Location = New System.Drawing.Point(119, 86)
-        Me.TuningButton.Name = "TuningButton"
-        Me.TuningButton.Size = New System.Drawing.Size(75, 23)
-        Me.TuningButton.TabIndex = 16
-        Me.TuningButton.Text = "Tuning"
-        Me.TuningButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
