@@ -12,6 +12,10 @@ You can minimize the GUI and it will keep mining in the System Tray. Double clic
 That's all. Enjoy!
 
 # Changelog
+v0.3 (11/4/2016) </br>
+-Added Stop Mining button </br>
+-Performance improvements
+
 v0.2b (11/4/2016)</br>
 -Fixed Threads and Blocks not being set to default values when Threads and Blocks are set to 0 in the Tuning Window</br>
 -Added a message in the Tuning Window that 0 means default values
