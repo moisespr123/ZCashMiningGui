@@ -13,9 +13,13 @@ That's all. Enjoy!
 
 # Changelog
 v0.2 (11/4/2016)
+
 -Added Compatibility Mode for Nvidia cards (-cv 1)
+
 -Added Threads and Blocks tuning for Nvidia cards (-ct and -cb)
+
 -Now using the nheqminer.exe executable
+
 -EU and USA server option removed in favor for a user-specified server and port. Currently defaults to Nicehash ZCash pool
 
 v0.1
