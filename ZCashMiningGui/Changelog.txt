@@ -1,4 +1,8 @@
-﻿v0.2 (11/4/2016)
+﻿v0.2b (11/4/2016)
+-Fixed Threads and Blocks not being set to default values when Threads and Blocks are set to 0 in the Tuning Window
+-Added a message in the Tuning Window that 0 means default values
+
+v0.2 (11/4/2016)
 -Added Compatibility Mode for Nvidia cards (-cv 1)
 -Added Threads and Blocks tuning for Nvidia cards (-ct and -cb)
 -Now using the nheqminer.exe executable

@@ -89,9 +89,13 @@
             If UseNvidia.Checked Then
                 If CUDAThreads = 0 = False Then
                     ThreadsAndBlocksCommand = "-ct " & CUDAThreads
+                Else
+                    ThreadsAndBlocksCommand = ""
                 End If
                 If CUDABlocks = 0 = False Then
                     ThreadsAndBlocksCommand += " -cb " & CUDABlocks
+                Else
+                    ThreadsAndBlocksCommand = ""
                 End If
             Else
                 ThreadsAndBlocksCommand = ""

@@ -35,18 +35,18 @@ Partial Class NvidiaTuning
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(9, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.Size = New System.Drawing.Size(114, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Threads:"
+        Me.Label1.Text = "Threads (0 for default):"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 57)
+        Me.Label2.Location = New System.Drawing.Point(9, 57)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 13)
+        Me.Label2.Size = New System.Drawing.Size(107, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Blocks:"
+        Me.Label2.Text = "Blocks (0 for default):"
         '
         'ThreadsField
         '
