@@ -26,9 +26,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AddressField = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.EuropeServer = New System.Windows.Forms.RadioButton()
-        Me.USAServer = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GPUDevicesField = New System.Windows.Forms.TextBox()
@@ -46,7 +43,11 @@ Partial Class Form1
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
+        Me.ServerField = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.CompatibilityModeCheckBox = New System.Windows.Forms.CheckBox()
+        Me.ShowCMD = New System.Windows.Forms.CheckBox()
+        Me.TuningButton = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -67,42 +68,10 @@ Partial Class Form1
         Me.AddressField.Size = New System.Drawing.Size(200, 20)
         Me.AddressField.TabIndex = 2
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.EuropeServer)
-        Me.GroupBox1.Controls.Add(Me.USAServer)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 51)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(139, 49)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Select Server Location:"
-        '
-        'EuropeServer
-        '
-        Me.EuropeServer.AutoSize = True
-        Me.EuropeServer.Location = New System.Drawing.Point(59, 19)
-        Me.EuropeServer.Name = "EuropeServer"
-        Me.EuropeServer.Size = New System.Drawing.Size(59, 17)
-        Me.EuropeServer.TabIndex = 1
-        Me.EuropeServer.TabStop = True
-        Me.EuropeServer.Text = "Europe"
-        Me.EuropeServer.UseVisualStyleBackColor = True
-        '
-        'USAServer
-        '
-        Me.USAServer.AutoSize = True
-        Me.USAServer.Checked = True
-        Me.USAServer.Location = New System.Drawing.Point(6, 19)
-        Me.USAServer.Name = "USAServer"
-        Me.USAServer.Size = New System.Drawing.Size(47, 17)
-        Me.USAServer.TabIndex = 0
-        Me.USAServer.TabStop = True
-        Me.USAServer.Text = "USA"
-        Me.USAServer.UseVisualStyleBackColor = True
-        '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TuningButton)
+        Me.GroupBox2.Controls.Add(Me.CompatibilityModeCheckBox)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.GPUDevicesField)
         Me.GroupBox2.Controls.Add(Me.UseNone)
@@ -110,7 +79,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.UseNvidia)
         Me.GroupBox2.Location = New System.Drawing.Point(15, 106)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(200, 115)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Use Nvidia or AMD?"
@@ -118,7 +87,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 49)
+        Me.Label2.Location = New System.Drawing.Point(3, 44)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 4
@@ -126,7 +95,7 @@ Partial Class Form1
         '
         'GPUDevicesField
         '
-        Me.GPUDevicesField.Location = New System.Drawing.Point(6, 65)
+        Me.GPUDevicesField.Location = New System.Drawing.Point(6, 60)
         Me.GPUDevicesField.Name = "GPUDevicesField"
         Me.GPUDevicesField.Size = New System.Drawing.Size(100, 20)
         Me.GPUDevicesField.TabIndex = 3
@@ -171,7 +140,7 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.Threads)
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.UseCPU)
-        Me.GroupBox3.Location = New System.Drawing.Point(15, 212)
+        Me.GroupBox3.Location = New System.Drawing.Point(15, 227)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(200, 100)
         Me.GroupBox3.TabIndex = 5
@@ -207,9 +176,9 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 318)
+        Me.Button1.Location = New System.Drawing.Point(12, 377)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 66)
+        Me.Button1.Size = New System.Drawing.Size(200, 53)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Start Mining!"
         Me.Button1.UseVisualStyleBackColor = True
@@ -269,13 +238,61 @@ Partial Class Form1
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(28, 13)
         Me.Label6.TabIndex = 11
-        Me.Label6.Text = "v0.1"
+        Me.Label6.Text = "v0.2"
+        '
+        'ServerField
+        '
+        Me.ServerField.Location = New System.Drawing.Point(15, 74)
+        Me.ServerField.Name = "ServerField"
+        Me.ServerField.Size = New System.Drawing.Size(200, 20)
+        Me.ServerField.TabIndex = 13
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(12, 58)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(60, 13)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Server:Port"
+        '
+        'CompatibilityModeCheckBox
+        '
+        Me.CompatibilityModeCheckBox.AutoSize = True
+        Me.CompatibilityModeCheckBox.Location = New System.Drawing.Point(6, 93)
+        Me.CompatibilityModeCheckBox.Name = "CompatibilityModeCheckBox"
+        Me.CompatibilityModeCheckBox.Size = New System.Drawing.Size(114, 17)
+        Me.CompatibilityModeCheckBox.TabIndex = 15
+        Me.CompatibilityModeCheckBox.Text = "Compatibility Mode"
+        Me.CompatibilityModeCheckBox.UseVisualStyleBackColor = True
+        '
+        'ShowCMD
+        '
+        Me.ShowCMD.AutoSize = True
+        Me.ShowCMD.Location = New System.Drawing.Point(15, 341)
+        Me.ShowCMD.Name = "ShowCMD"
+        Me.ShowCMD.Size = New System.Drawing.Size(172, 30)
+        Me.ShowCMD.TabIndex = 15
+        Me.ShowCMD.Text = "Show CMD window" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Output will not be shown here)"
+        Me.ShowCMD.UseVisualStyleBackColor = True
+        '
+        'TuningButton
+        '
+        Me.TuningButton.Location = New System.Drawing.Point(119, 86)
+        Me.TuningButton.Name = "TuningButton"
+        Me.TuningButton.Size = New System.Drawing.Size(75, 23)
+        Me.TuningButton.TabIndex = 16
+        Me.TuningButton.Text = "Tuning"
+        Me.TuningButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(975, 439)
+        Me.Controls.Add(Me.ShowCMD)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.ServerField)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label5)
@@ -284,14 +301,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.AddressField)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Nicehash ZCash Miner GUI"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -303,9 +317,6 @@ Partial Class Form1
 
     Friend WithEvents Label1 As Label
     Friend WithEvents AddressField As TextBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents EuropeServer As RadioButton
-    Friend WithEvents USAServer As RadioButton
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents GPUDevicesField As TextBox
@@ -323,4 +334,9 @@ Partial Class Form1
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents NotifyIcon1 As NotifyIcon
     Friend WithEvents Label6 As Label
+    Friend WithEvents CompatibilityModeCheckBox As CheckBox
+    Friend WithEvents ServerField As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents ShowCMD As CheckBox
+    Friend WithEvents TuningButton As Button
 End Class
