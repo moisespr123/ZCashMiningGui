@@ -10,3 +10,13 @@ To mine ZCash, just fill out the details and press the "Start Mining!" button. A
 You can minimize the GUI and it will keep mining in the System Tray. Double click it to show the software.
 
 That's all. Enjoy!
+
+# Changelog
+v0.2 (11/4/2016)</br>
+-Added Compatibility Mode for Nvidia cards (-cv 1)</br>
+-Added Threads and Blocks tuning for Nvidia cards (-ct and -cb)</br>
+-Now using the nheqminer.exe executable</br>
+-EU and USA server option removed in favor for a user-specified server and port. Currently defaults to Nicehash ZCash pool
+
+v0.1</br>
+-Initial Releas
