@@ -305,7 +305,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Nicehash ZCash Miner GUI"
+        Me.Text = "nheqminer ZCash Miner GUI"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
