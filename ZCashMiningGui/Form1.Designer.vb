@@ -48,6 +48,7 @@ Partial Class Form1
         Me.ServerField = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ShowCMD = New System.Windows.Forms.CheckBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -197,7 +198,7 @@ Partial Class Form1
         '
         Me.Button1.Location = New System.Drawing.Point(12, 377)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 53)
+        Me.Button1.Size = New System.Drawing.Size(90, 53)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Start Mining!"
         Me.Button1.UseVisualStyleBackColor = True
@@ -255,9 +256,9 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(802, 417)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(34, 13)
+        Me.Label6.Size = New System.Drawing.Size(28, 13)
         Me.Label6.TabIndex = 11
-        Me.Label6.Text = "v0.2b"
+        Me.Label6.Text = "v0.3"
         '
         'ServerField
         '
@@ -285,11 +286,22 @@ Partial Class Form1
         Me.ShowCMD.Text = "Show CMD window" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Output will not be shown here)"
         Me.ShowCMD.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Enabled = False
+        Me.Button2.Location = New System.Drawing.Point(108, 377)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 53)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "StopMining"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(975, 439)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ShowCMD)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ServerField)
@@ -339,4 +351,5 @@ Partial Class Form1
     Friend WithEvents Label8 As Label
     Friend WithEvents ShowCMD As CheckBox
     Friend WithEvents TuningButton As Button
+    Friend WithEvents Button2 As Button
 End Class

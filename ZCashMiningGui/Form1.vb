@@ -115,7 +115,9 @@
             thrdCMD = New System.Threading.Thread(AddressOf Miner)
             thrdCMD.IsBackground = True
             thrdCMD.Start()
-            End If
+            Button2.Enabled = True
+            Button1.Enabled = False
+        End If
     End Sub
     Private Sub Miner()
         Dim ArgumentsToUse As String = ""
@@ -149,9 +151,6 @@
             procMiner.StartInfo.Arguments = ArgumentsToUse
             procMiner.StartInfo.WorkingDirectory = System.IO.Directory.GetCurrentDirectory & "\nheqminer\"
             procMiner.Start()
-            Do Until (procMiner.HasExited)
-            Loop
-            procMiner.Dispose()
         Else
             AddHandler procMiner.OutputDataReceived, AddressOf MinerOutput
             procMiner.StartInfo.RedirectStandardOutput = True
@@ -311,5 +310,13 @@
 
     Private Sub TuningButton_Click(sender As Object, e As EventArgs) Handles TuningButton.Click
         NvidiaTuning.ShowDialog()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each P As Process In System.Diagnostics.Process.GetProcessesByName("nheqminer")
+            P.Kill()
+        Next
+        Button1.Enabled = True
+        Button2.Enabled = False
     End Sub
 End Class
